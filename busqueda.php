@@ -22,7 +22,7 @@ include ('conexion.php');
     	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
       <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 
-    <script>
+    <!-- <script>
 	  $(document).ready(function() {
     $('#example').DataTable( {
         "ajax": "funciones.php",
@@ -40,9 +40,7 @@ include ('conexion.php');
         ]
     } );
 } );
-     </script>
-
-
+     </script> -->
 
     <title>Busqueda!</title>
   </head>
@@ -67,7 +65,18 @@ include ('conexion.php');
             </tr>
         </thead>
         <tbody>
-
+					<tr>
+						<td>16282431-7</td>
+						<td>Christian</td>
+						<td>Lizama</td>
+						<td>Seremi Central</td>
+						<td>Hoy</td>
+						<td>Xiaomi</td>
+						<td>Mi 9</td>
+						<td>123456789</td>
+						<td>1234</td>
+						<td>78685144</td>
+					</tr>
         </tbody>
         <tfoot class="thead-dark" >
             <tr>

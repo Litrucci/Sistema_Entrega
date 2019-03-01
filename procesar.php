@@ -103,12 +103,12 @@ $ultimoid_cel = mysqli_insert_id($conexion);
 // Inserta Datos tabla Acta
 if (!empty ($fentrega)&& !empty($funcionarioid)&& !empty($ultimoid_cel)&& !empty($lugar))
 {
-$insert_acta = "INSERT INTO acta (fecha_entrega, funcionario_id, celular_id, establecimiento_id) VALUES ('$fentrega', '$funcionarioid', '$ultimoid_cel', $lugar)";
-print_r($insert_acta); 
-$resu_acta=mysqli_query($conexion,$insert_acta) or die ('error en el INSERT acta');
+    $insert_acta = "INSERT INTO acta (fecha_entrega, funcionario_id, celular_id, establecimiento_id) VALUES ('$fentrega', '$funcionarioid', '$ultimoid_cel', $lugar)";
+    $resu_acta=mysqli_query($conexion,$insert_acta) or die ('error en el INSERT acta');
 
-$insert_funcionario = "INSERT INTO funcionarios (NULL, rut, nombre, apellidop) VALUES ('$rut, $apellido, $nombre')";
-$resu_funcionario = mysqli_query ($conexion, $insert_funcionario) or die ('error en el INSERT funcionario');
+    $insert_funcionario = "INSERT INTO funcionarios (rut, nombre, apellidop) VALUES ('$rut, $nombre, $apellido')";
+    $resu_funcionario = mysqli_query ($conexion, $insert_funcionario) or die ('error en el INSERT funcionario');
+   
 }
 mysqli_close($conexion);
 

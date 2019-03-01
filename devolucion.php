@@ -1,10 +1,6 @@
 <?php  
 include ("procesar.php");
 
-//$resultados3 = mysqli_query($conexion,"SELECT * FROM funcionarios ");
-//print_r($resultados3);exit;
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
