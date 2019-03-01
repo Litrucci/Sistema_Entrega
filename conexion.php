@@ -21,33 +21,33 @@
 //    echo "<br>";
 // }
 
-if (isset ($_GET['term'])){
+// if (isset ($_GET['term'])){
 		
-	$string = $_GET['term'];		
+// 	$string = $_GET['term'];		
 			
-		}else{
+// 		}else{
 			
-			$string = "";
-		}
+// 			$string = "";
+// 		}
 	
-	$result = mysqli_query ($conexion, "SELECT * FROM funcionarios where rut like '%$string%'");
+// 	$result = mysqli_query ($conexion, "SELECT * FROM funcionarios where rut like '%$string%'");
 	
-	//$array = array();
-	if ($result){
-		$array = [];
-		$array_respuesta=[];
-		while ($row = mysqli_fetch_assoc($result)){
-			$array['id'] =$row ['id'];
-			//print_r($array['id']);
-			//$array['label'] =$row ['rut'];
-			$array['value'] =$row['rut'];
-			$array['nombre_persona'] =$row ['nombre'];
-			$array['apellido_persona'] =$row ['apellidop'];
-			array_push($array_respuesta, $array);	
-		}
-		echo json_encode($array_respuesta);
+// 	//$array = array();
+// 	if ($result){
+// 		$array = [];
+// 		$array_respuesta=[];
+// 		while ($row = mysqli_fetch_assoc($result)){
+// 			$array['id'] =$row ['id'];
+// 			//print_r($array['id']);
+// 			//$array['label'] =$row ['rut'];
+// 			$array['value'] =$row['rut'];
+// 			$array['nombre_persona'] =$row ['nombre'];
+// 			$array['apellido_persona'] =$row ['apellidop'];
+// 			array_push($array_respuesta, $array);	
+// 		}
+// 		echo json_encode($array_respuesta);
 
-	}
+// 	}
 
  
 ?>

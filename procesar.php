@@ -2,18 +2,6 @@
 
 include ("conexion.php");
 
-//$imei = $_POST['imei'];
-//$modelo = $_POST['modelo'];
-//$marca  = $_POST['marca'];
-//$numero = $_POST['numero_celu'];
-//$simcard = $_POST['simcard'];
-//$nombre = $_POST['nombre'];
-//$apellido = $_POST['apellido'];
-//$rut = $_POST['rut'];
-//$fentrega = $_POST['fecha_entrega'];
-//$funcionarioid = $_POST['funcionarioid'];
-//$lugar = $_POST['lugar'];
-
 if (isset ($_POST['imei'])){
 		
 	$imei = $_POST['imei'];		
@@ -24,7 +12,6 @@ if (isset ($_POST['imei'])){
         }
 
 if (isset ($_POST['modelo'])){
-		
     $modelo = $_POST['modelo'];		
                     
         }else{
@@ -33,7 +20,6 @@ if (isset ($_POST['modelo'])){
         }
 
 if (isset ($_POST['marca'])){
-		
 	$marca = $_POST['marca'];		
 			
 		}else{
@@ -42,7 +28,6 @@ if (isset ($_POST['marca'])){
         }
 
 if (isset ($_POST['numero_celu'])){
-		
     $numero = $_POST['numero_celu'];		
                     
         }else{
@@ -51,7 +36,6 @@ if (isset ($_POST['numero_celu'])){
         }
 
 if (isset ($_POST['simcard'])){
-		
     $simcard = $_POST['simcard'];		
                             
         }else{
@@ -60,7 +44,6 @@ if (isset ($_POST['simcard'])){
         }
 
 if (isset ($_POST['nombre'])){
-		
     $nombre = $_POST['nombre'];		
                                     
         }else{
@@ -69,7 +52,6 @@ if (isset ($_POST['nombre'])){
         }
 
 if (isset ($_POST['apellido'])){
-		
     $apellido = $_POST['apellido'];		
                                             
         }else{
@@ -78,7 +60,6 @@ if (isset ($_POST['apellido'])){
         }
 
 if (isset ($_POST['rut'])){
-		
     $rut = $_POST['rut'];		
             
         }else{
@@ -87,7 +68,6 @@ if (isset ($_POST['rut'])){
         }
 
 if (isset ($_POST['fecha_entrega'])){
-		
     $fentrega = $_POST['fecha_entrega'];		
                                                             
         }else{
@@ -96,7 +76,6 @@ if (isset ($_POST['fecha_entrega'])){
         }
 
 if (isset ($_POST['funcionarioid'])){
-		
     $funcionarioid = $_POST['funcionarioid'];		
                                                                     
         }else{
@@ -105,7 +84,6 @@ if (isset ($_POST['funcionarioid'])){
         }
 
 if (isset ($_POST['lugar'])){
-		
     $lugar = $_POST['lugar'];		
                                                                             
         }else{
@@ -129,8 +107,8 @@ $insert_acta = "INSERT INTO acta (fecha_entrega, funcionario_id, celular_id, est
 print_r($insert_acta); 
 $resu_acta=mysqli_query($conexion,$insert_acta) or die ('error en el INSERT acta');
 
-// $insert_funcionario = "INSERT INTO funcionarios (establecimiento_id) VALUES ('$lugar')";
-// $resu_funcionario = mysqli_query ($conexion, $insert_funcionario) or die ('error en el INSERT funcionario');
+$insert_funcionario = "INSERT INTO funcionarios (NULL, rut, nombre, apellidop) VALUES ('$rut, $apellido, $nombre')";
+$resu_funcionario = mysqli_query ($conexion, $insert_funcionario) or die ('error en el INSERT funcionario');
 }
 mysqli_close($conexion);
 

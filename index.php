@@ -15,21 +15,6 @@ $resultados2 = mysqli_query($conexion,"SELECT * FROM funcionarios ");
         
      <title>Entrega</title>
 
-        <script>
-                $(function() {  
-                        $( "#rut" ).autocomplete({
-                                source: "conexion.php",
-                                minLength: 1,
-        
-                select: function( event, ui ) {
-                        $( "#nombre" ).val( ui.item.nombre_persona );
-                        $( "#apellido" ).val( ui.item.apellido_persona );
-                        $( "#funcionarioid" ).val( ui.item.id );
-                        }
-                        })
-                });
-        </script>
-
 </head>
 <body>
         <h1 class="text-center mt-2 mb-3 mr-5 ">Entrega de equipos</h1>
